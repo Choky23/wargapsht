@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  background: #ffffff;
+  width: 340px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #475569;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: muncul 0.5s ease;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.container h1 {
+  font-size: 24px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+button {
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#tombolYa {
+  background: #16a34a;
+}
+
+#tombolYa:hover {
+  background: #15803d;
+  transform: scale(1.08);
+}
+
+#tombolTidak {
+  background: #dc2626;
+}
+
+#tombolTidak:hover {
+  background: #b91c1c;
+  transform: scale(1.08);
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  button {
+    width: 100px;
+    font-size: 15px;
+  }
+
+  .container h1 {
+    font-size: 20px;
+  }
+}
